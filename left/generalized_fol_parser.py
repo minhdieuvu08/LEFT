@@ -191,7 +191,8 @@ if __name__ == '__main__':
                         csv_writer.writerow([prompt, code, False, str(e)])
         print(f'Parsing results are saved to {csv_filename}.')
         return domain
-
+    
+    # (08/09/2025) No such file or directory: './codex/prompts/v3.txt'
     with open('./codex/prompts/v3.txt') as f:
         prompts = f.read()
 
