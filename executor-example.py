@@ -1,3 +1,9 @@
+import sys
+import os
+
+# Thêm folder chứa LEFT vào path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), ".")))
+
 import torch
 from LEFT.left.generalized_fol_executor import (
     NCGeneralizedFOLExecutor,
@@ -6,6 +12,7 @@ from LEFT.left.generalized_fol_executor import (
 )
 from Concepts.concepts.dsl.function_domain import FunctionDomain
 from Concepts.concepts.dsl.parsers import parser_base
+#from Concepts.concepts.dsl.executors.function_domain_executor import FunctionDomainExecutor 
 
 def main():
     domain = FunctionDomain()
@@ -15,18 +22,18 @@ def main():
     print("Input matrix:\n", x)
     print("Self mask:\n", _get_self_mask(x))
 
-    print("After applying self mask:\n", executor._do_apply_self_mask(x))
+    print("After applying self mask:\n", _do_apply_self_mask(x))
+    
+    # args = [1, [2, 3], 4]
+    # print("Expand args:", executor.expand_argument_values(args))
 
-    items = [1, 2, 3, 4, 5]
-    print("Count:", executor._count(items))
+    # try:
+    #     result = executor._execute("COUNT")  
+    #     print("Execute result:", result)
+    # except Exception as e:
+    #     print("Execute failed:", e)
 
-    args = [1, [2, 3], 4]
-    print("Expand args:", executor.expand_argument_values(args))
-
-    result = executor._execute("COUNT")
-    print("Execute result:", result)
-
-    print("Execution trace:", executor._execution_trace)
+    # print("Execution trace:", executor._execution_trace)
 
 if __name__ == "__main__":
     main()
