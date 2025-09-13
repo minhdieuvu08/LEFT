@@ -27,7 +27,7 @@ def run_test():
 
 
     code_examples = {
-        "example 1": ["exists(x, equal(x, 1))"],
+        "example 1": ["exists(Object, lambda x: left(x, iota(Object, lambda y: target(y))))"],
         "example 2": ["forall(y, greater_than(y, 0))"]
     }
 

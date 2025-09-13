@@ -8,3 +8,5 @@ TypeSystem: FunctionDomain
     equal(_0: int64, _1: int64) -> bool
     greater_than(_0: int64, _1: int64) -> bool
     less_than(_0: int64, _1: int64) -> bool
+    target_Object(_0: Object) -> bool
+    left_Object_Object(_0: Object, _1: Object) -> bool
