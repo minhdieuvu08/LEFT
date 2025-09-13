@@ -1,0 +1,3 @@
+prompt,code,success,parsing
+example 1,"exists(x, equal(x, 1))",False,"Expect a lambda expression for quantification expressions, got <ast.Call object at 0x7ed4d5eff280>: Call(func=Name(id='exists', ctx=Load()), args=[Name(id='x', ctx=Load()), Call(func=Name(id='equal', ctx=Load()), args=[Name(id='x', ctx=Load()), Constant(value=1)], keywords=[])], keywords=[])"
+example 2,"forall(y, greater_than(y, 0))",False,"Expect a lambda expression for quantification expressions, got <ast.Call object at 0x7ed4d5efdb70>: Call(func=Name(id='forall', ctx=Load()), args=[Name(id='y', ctx=Load()), Call(func=Name(id='greater_than', ctx=Load()), args=[Name(id='y', ctx=Load()), Constant(value=0)], keywords=[])], keywords=[])"

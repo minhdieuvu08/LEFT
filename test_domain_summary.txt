@@ -1,0 +1,10 @@
+TypeSystem: FunctionDomain
+  Types:
+    Object
+    ObjectSet
+    Action
+  Constants:
+  Functions:
+    equal(_0: int64, _1: int64) -> bool
+    greater_than(_0: int64, _1: int64) -> bool
+    less_than(_0: int64, _1: int64) -> bool
